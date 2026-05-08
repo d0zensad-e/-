@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Скачать приложение</title>
+    <title>Приложение</title>
     <style>
         * {
             margin: 0;
@@ -72,8 +72,8 @@
             margin: 0 auto;
         }
 
-        /* Download Section */
-        .download-section {
+        /* About Section */
+        .about-section {
             background-color: var(--bg-secondary);
             padding: 40px;
             border-radius: 12px;
@@ -99,89 +99,96 @@
             border-radius: 2px;
         }
 
-        .download-grid {
+        .about-content {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Links Section */
+        .links-section {
+            background-color: var(--bg-secondary);
+            padding: 35px 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            margin-top: 25px;
         }
 
-        .download-card {
+        .link-card {
             background-color: var(--bg-tertiary);
             padding: 24px;
             border-radius: 8px;
             border: 1px solid var(--border-color);
-            transition: all 0.3s ease;
-            cursor: pointer;
             text-decoration: none;
+            transition: all 0.3s ease;
             display: block;
         }
 
-        .download-card:hover {
+        .link-card:hover {
             border-color: var(--accent-color);
             transform: translateY(-2px);
             box-shadow: 0 4px 16px rgba(45, 125, 95, 0.15);
         }
 
-        .file-icon {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--bg-secondary);
-            border-radius: 6px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            color: var(--accent-color);
-            border: 1px solid var(--border-color);
-        }
-
-        .file-name {
-            font-size: 1rem;
+        .link-name {
+            font-size: 1.05rem;
             font-weight: 500;
             color: var(--text-primary);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
-        .file-type {
-            font-size: 0.85rem;
+        .link-description {
+            font-size: 0.9rem;
             color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
         }
 
-        /* GitHub Section */
-        .github-section {
+        /* Chat Section */
+        .chat-section {
             background-color: var(--bg-secondary);
-            padding: 30px 40px;
+            padding: 35px 40px;
             border-radius: 12px;
             border: 1px solid var(--border-color);
             margin-bottom: 30px;
             text-align: center;
         }
 
-        .github-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
+        .chat-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
             color: var(--text-primary);
+        }
+
+        .chat-link {
+            display: inline-block;
+            color: var(--accent-color);
             text-decoration: none;
             font-size: 1.05rem;
-            padding: 12px 24px;
-            border: 1px solid var(--border-color);
+            font-weight: 500;
+            padding: 14px 28px;
+            background-color: rgba(45, 125, 95, 0.08);
+            border: 1px solid var(--accent-color);
             border-radius: 8px;
             transition: all 0.3s ease;
+            word-break: break-all;
+            max-width: 100%;
         }
 
-        .github-link:hover {
-            border-color: var(--accent-color);
-            color: var(--accent-color);
-            background-color: rgba(45, 125, 95, 0.05);
-        }
-
-        .github-icon {
-            font-size: 1.5rem;
+        .chat-link:hover {
+            background-color: rgba(45, 125, 95, 0.15);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(45, 125, 95, 0.2);
         }
 
         /* Contact Section */
@@ -238,9 +245,10 @@
                 font-size: 2rem;
             }
 
-            .download-section,
+            .about-section,
             .contact-section,
-            .github-section {
+            .chat-section,
+            .links-section {
                 padding: 25px 20px;
             }
 
@@ -263,62 +271,50 @@
                 <img src="https://z-cdn-media.chatglm.cn/files/b3912c5e-1c35-4bf7-8cfb-6b193878bcd7.png?auth_key=1878095346-78cf76d068ca45a3b2569307ecde92ab-0-2749dd253573fe9f5b9516526c8ebe12" alt="Logo" class="logo">
             </div>
             <h1 class="title">Приложение</h1>
-            <p class="subtitle">Скачайте последнюю версию приложения для вашей операционной системы</p>
+            <p class="subtitle">Добро пожаловать на наш сайт</p>
         </section>
 
-        <!-- Download Section -->
-        <section class="download-section">
-            <h2 class="section-title">Файлы для скачивания</h2>
+        <!-- About Section (Про кружок) -->
+        <section class="about-section">
+            <h2 class="section-title">О нашем кружке</h2>
+            <div class="about-content">
+                <p>Здесь вы можете рассказать о вашем кружке. Напишите о целях, задачах, деятельности и особенностях вашего сообщества.</p>
+                <p>Опишите чем занимается ваш кружок, кто может присоединиться, какие проекты вы реализуете.</p>
+                <p><strong>Пример:</strong> Мы - сообщество энтузиастов, объединённых общей целью. Наш кружок занимается разработкой программного обеспечения, обучением и обменом опытом между участниками.</p>
+            </div>
+        </section>
+
+        <!-- Links Section (GitHub & Google Drive) -->
+        <section class="links-section">
+            <h2 class="section-title">Полезные ссылки</h2>
             
-            <div class="download-grid">
-                <!-- EXE File -->
-                <a href="#" class="download-card" onclick="alert('Скачивание файла начнётся скоро')">
-                    <div class="file-icon">EXE</div>
-                    <div class="file-name">Установщик</div>
-                    <div class="file-type">Исполняемый файл</div>
+            <div class="links-grid">
+                <!-- GitHub Link -->
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <div class="link-name">GitHub</div>
+                    <div class="link-description">Исходный код проекта</div>
                 </a>
 
-                <!-- ZIP Files -->
-                <a href="#" class="download-card" onclick="alert('Скачивание файла начнётся скоро')">
-                    <div class="file-icon">ZIP</div>
-                    <div class="file-name">Архив 1</div>
-                    <div class="file-type">ZIP архив</div>
-                </a>
-
-                <a href="#" class="download-card" onclick="alert('Скачивание файла начнётся скоро')">
-                    <div class="file-icon">ZIP</div>
-                    <div class="file-name">Архив 2</div>
-                    <div class="file-type">ZIP архив</div>
-                </a>
-
-                <a href="#" class="download-card" onclick="alert('Скачивание файла начнётся скоро')">
-                    <div class="file-icon">ZIP</div>
-                    <div class="file-name">Архив 3</div>
-                    <div class="file-type">ZIP архив</div>
-                </a>
-
-                <a href="#" class="download-card" onclick="alert('Скачивание файла начнётся скоро')">
-                    <div class="file-icon">ZIP</div>
-                    <div class="file-name">Архив 4</div>
-                    <div class="file-type">ZIP архив</div>
+                <!-- Google Drive Link -->
+                <a href="https://drive.google.com/drive/folders/1_hUHGnpRtEEkdda3qYDsccLvCj08E53O" target="_blank" rel="noopener noreferrer" class="link-card">
+                    <div class="link-name">Google Drive</div>
+                    <div class="link-description">Файлы и документы</div>
                 </a>
             </div>
         </section>
 
-        <!-- GitHub Section -->
-        <section class="github-section">
-            <h2 class="section-title" style="justify-content: center;">Исходный код</h2>
-            <p style="color: var(--text-secondary); margin-bottom: 20px;">Посмотреть исходный код на GitHub</p>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="github-link">
-                <span class="github-icon">&#9741;</span>
-                Открыть репозиторий
+        <!-- Chat Section -->
+        <section class="chat-section">
+            <h2 class="chat-title">Присоединяйся к чату по ссылке:</h2>
+            <a href="https://max.ru/join/VxmsK-_mKZyamJ8eBDiW8BMNqHnnBFo7sjIgRD0XKfo" target="_blank" rel="noopener noreferrer" class="chat-link">
+                https://max.ru/join/VxmsK-_mKZyamJ8eBDiW8BMNqHnnBFo7sjIgRD0XKfo
             </a>
         </section>
 
         <!-- Contact Section -->
         <section class="contact-section">
-            <h2 class="contact-title">Нужна помощь?</h2>
-            <p class="contact-text">Если у вас возникли вопросы или вам нужна дополнительная информация, свяжитесь с нами по электронной почте</p>
+            <h2 class="contact-title">Связаться с нами</h2>
+            <p class="contact-text">Если у вас возникли вопросы, свяжитесь по электронной почте</p>
             <a href="mailto:pittip512@yandex.ru" class="email-link">pittip512@yandex.ru</a>
         </section>
 
@@ -328,4 +324,4 @@
         </footer>
     </div>
 </body>
-  </html>
+</html>
